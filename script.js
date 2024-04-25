@@ -1,3 +1,4 @@
+//fetching buttons
 let startBtn = document.getElementById("start");
 let stopBtn = document.getElementById("stop");
 let resetBtn = document.getElementById("reset");
@@ -7,15 +8,18 @@ let minute = 0;
 let second = 0;
 let count = 0;
 
+//event listener on start button
 startBtn.addEventListener("click", function () {
   timer = true;
   stopWatch();
 });
 
+//event listener on stop button
 stopBtn.addEventListener("click", function () {
   timer = false;
 });
 
+//event listener on reset button
 resetBtn.addEventListener("click", function () {
   timer = false;
   hour = 0;
@@ -28,6 +32,7 @@ resetBtn.addEventListener("click", function () {
   document.getElementById("count").innerHTML = "00";
 });
 
+//functionality of stopwatch
 function stopWatch() {
   if (timer) {
     count++;
